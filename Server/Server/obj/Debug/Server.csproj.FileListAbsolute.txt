@@ -1,0 +1,12 @@
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\Server.exe.config
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\Server.exe
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\Server.pdb
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\MySql.Data.dll
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\PEProtocol.dll
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\PESocket.dll
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\bin\Debug\PEProtocol.pdb
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\obj\Debug\Server.csproj.CopyComplete
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\obj\Debug\Server.exe
+D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Server\Server\obj\Debug\Server.pdb
