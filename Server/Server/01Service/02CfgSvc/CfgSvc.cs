@@ -24,7 +24,6 @@ public class CfgSvc {
         InitGuideCfg();
         InitStrongCfg();
         InitTaskRewrdCfg();
-        InitMapCfg();
         PECommon.Log("CfgSvc Init Done.");
     }
 
@@ -32,7 +31,7 @@ public class CfgSvc {
     private Dictionary<int, GuideCfg> guideDic = new Dictionary<int, GuideCfg>();
     private void InitGuideCfg() {
         XmlDocument doc = new XmlDocument();
-        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Client\Assets\Resources\ResCfgs\guide.xml");
+        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod\Client\Assets\Resources\ResCfgs\guide.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -75,7 +74,7 @@ public class CfgSvc {
     private Dictionary<int, Dictionary<int, StrongCfg>> strongDic = new Dictionary<int, Dictionary<int, StrongCfg>>();
     private void InitStrongCfg() {
         XmlDocument doc = new XmlDocument();
-        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Client\Assets\Resources\ResCfgs\strong.xml");
+        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod\Client\Assets\Resources\ResCfgs\strong.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -149,7 +148,7 @@ public class CfgSvc {
     private Dictionary<int, TaskRewardCfg> taskRewardDic = new Dictionary<int, TaskRewardCfg>();
     private void InitTaskRewrdCfg() {
         XmlDocument doc = new XmlDocument();
-        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Client\Assets\Resources\ResCfgs\taskreward.xml");
+        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod\Client\Assets\Resources\ResCfgs\taskreward.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -190,50 +189,6 @@ public class CfgSvc {
         return null;
     }
     #endregion
-
-    #region 地图配置
-    private Dictionary<int, MapCfg> mapDic = new Dictionary<int, MapCfg>();
-    private void InitMapCfg() {
-        XmlDocument doc = new XmlDocument();
-        doc.Load(@"D:\zj_Programs\U3DFile\1\19\0Game\DarkGod_Night\Client\Assets\Resources\ResCfgs\map.xml");
-
-        XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
-
-        for (int i = 0; i < nodLst.Count; i++) {
-            XmlElement ele = nodLst[i] as XmlElement;
-
-            if (ele.GetAttributeNode("ID") == null) {
-                continue;
-            }
-            int ID = Convert.ToInt32(ele.GetAttributeNode("ID").InnerText);
-            MapCfg mc = new MapCfg {
-                ID = ID
-            };
-
-            foreach (XmlElement e in nodLst[i].ChildNodes) {
-                switch (e.Name) {
-                    case "power":
-                        mc.power = int.Parse(e.InnerText);
-                        break;
-                }
-            }
-            mapDic.Add(ID, mc);
-        }
-        PECommon.Log("MapCfg Init Done.");
-
-    }
-    public MapCfg GetMapCfg(int id) {
-        MapCfg mc = null;
-        if (mapDic.TryGetValue(id, out mc)) {
-            return mc;
-        }
-        return null;
-    }
-    #endregion
-}
-
-public class MapCfg : BaseData<MapCfg> {
-    public int power;
 }
 
 public class StrongCfg : BaseData<StrongCfg> {

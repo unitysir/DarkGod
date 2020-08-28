@@ -36,9 +36,6 @@ namespace PEProtocol {
         public RspTakeTaskReward rspTakeTaskReward;
 
         public PshTaskPrgs pshTaskPrgs;
-
-        public ReqFBFight reqFBFight;
-        public RspFBFight rspFBFight;
     }
 
     #region 登录相关
@@ -180,19 +177,6 @@ namespace PEProtocol {
     }
     #endregion
 
-    #region 副本战斗相关
-
-    [Serializable]
-    public class ReqFBFight {
-        public int fbid;
-    }
-    public class RspFBFight {
-        public int fbid;
-        public int power;
-    }
-
-    #endregion
-
     public enum ErrorCode {
         None = 0,//没有错误
         ServerDataError,//服务器数据异常
@@ -207,8 +191,6 @@ namespace PEProtocol {
         LackCoin,
         LackCrystal,
         LackDiamond,
-        LackPower,
-
     }
 
     public enum CMD {
@@ -239,10 +221,6 @@ namespace PEProtocol {
         RspTakeTaskReward = 211,
 
         PshTaskPrgs = 212,
-
-        // 副本战斗相关
-        ReqFBFight = 301,
-        RspFBFight = 302,
     }
 
     public class SrvCfg {

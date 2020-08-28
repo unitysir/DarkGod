@@ -8,7 +8,6 @@
 
 using PENet;
 using PEProtocol;
-using Server._02System._08FubenSys;
 using System.Collections.Generic;
 
 public class MsgPack {
@@ -78,9 +77,6 @@ public class NetSvc {
                 break;
             case CMD.ReqTakeTaskReward:
                 TaskSys.Instance.ReqTakeTaskReward(pack);
-                break;
-            case CMD.ReqFBFight:
-                FubenSys.Instance.ReqFBFight(pack);
                 break;
         }
     }

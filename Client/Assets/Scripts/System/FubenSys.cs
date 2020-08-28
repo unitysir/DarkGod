@@ -6,9 +6,6 @@
 	功能：副本业务系统
 *****************************************************/
 
-using PEProtocol;
-using TMPro;
-
 public class FubenSys : SystemRoot {
     public static FubenSys Instance = null;
 
@@ -30,12 +27,5 @@ public class FubenSys : SystemRoot {
         fubenWnd.SetWndState();
     }
     #endregion
-
-    public void RspFBFight(GameMsg msg) {
-        GameRoot.Instance.SetPlayerDataByFBStart(msg.rspFBFight);
-
-        MainCitySys.Instance.maincityWnd.SetWndState(false) ;
-    }
-
 
 }

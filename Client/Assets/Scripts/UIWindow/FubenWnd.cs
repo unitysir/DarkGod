@@ -40,26 +40,6 @@ public class FubenWnd : WindowRoot {
         }
     }
 
-    public void ClickTaskBtn(int fbid)
-    {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
-        //检查体力是否足够
-        int power = resSvc.GetMapCfg(fbid).power;
-        if (power > pd.power)
-        {
-            GameRoot.AddTips("体力不足！");
-        }
-        else
-        {
-            netSvc.SendMsg(new GameMsg {
-                cmd = (int)CMD.ReqFBFight,
-                reqFBFight = new ReqFBFight {
-                    fbid = fbid
-                }
-            });
-        }
-    }
-
     public void ClickCloseBtn() {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
         SetWndState(false);

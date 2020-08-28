@@ -112,8 +112,4 @@ public class GameRoot : MonoBehaviour {
     public void SetPlayerDataByTaskPsh(PshTaskPrgs data) {
         PlayerData.taskArr = data.taskArr;
     }
-
-    public void SetPlayerDataByFBStart(RspFBFight data) {
-        PlayerData.power = data.power;
-    }
 }

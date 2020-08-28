@@ -6,8 +6,6 @@
 	功能：服务器初始化
 *****************************************************/
 
-using Server._02System._08FubenSys;
-
 public class ServerRoot {
     private static ServerRoot instance = null;
     public static ServerRoot Instance {
@@ -37,7 +35,6 @@ public class ServerRoot {
         BuySys.Instance.Init();
         PowerSys.Instance.Init();
         TaskSys.Instance.Init();
-        FubenSys.Instance.Init();
     }
 
     public void Update() {
